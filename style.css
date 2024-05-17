@@ -4,33 +4,48 @@
     box-sizing: border-box;
 }
 .main_container{
-    display:grid;
-    grid-template-columns: 1fr 4fr;
+    display: grid;
+    /* grid-template-columns:repeat(auto-fit,minmax(3rem,1fr)); */
+    grid-template-columns: 1fr 3fr;
+
 }
 .sidebar{
     background-color: rgb(21, 140, 243);
     color: white;
     display: flex;
     flex-direction: column;
+    align-items:flex-start;
     gap:20px;
     height: 100vh;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-content: center;
     padding: 10px;
     
+
+}
+.center-element{
+    display: flex;
+    align-items: center;
+    justify-items: center;
 
 }
 .logo{
     font-size: 1.5rem;
     cursor:pointer;
-    display: flex;
-   align-items: center;
-   gap: 10px;
+   
+  
 }
+.sidebar-item{
+    padding: 0.5rem;
+}
+
 .material-symbols-outlined{
-    margin-right: 10px;
-    font-weight: bold;
-    font-size: 1.1rem;
+  
+    height: 2rem;
+    margin-right: 10px; 
+ 
+  
 }
