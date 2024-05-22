@@ -26,9 +26,12 @@
     padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-content: center;
-    padding: 10px;
+   
     
 
+}
+.sidebar-part{
+    width: 100%;
 }
 .center-element{
     display: flex;
@@ -43,8 +46,17 @@
   
 }
 .sidebar-item{
+    width: 100%;
     padding: 0.5rem;
+   
     
+}
+.sidebar-link{
+    width: 100%;
+}
+.sidebar-item:hover{
+    border-bottom: 2px solid white;
+    cursor: pointer;
 }
 
 .material-symbols-outlined{
@@ -54,7 +66,7 @@
  
   
 }
-/* _____________________ End of sidbar styles______________________ */
+/* _____________________ End of sidebar styles______________________ */
 
 /* _____________________ Start of Header styles______________________ */
 .header{
@@ -109,7 +121,15 @@
     color: white;
     font-weight: bold;
     margin: 10px;
+    cursor: pointer;
+
     
+}
+.header_btn:hover{
+    background-color: white;
+    color: rgb(21, 140, 243);
+    font-weight: bolder;
+    border: 1px solid rgb(21, 140, 243);
 }
 
 .welcome_container{
@@ -136,5 +156,12 @@
     font-weight: bold;
 }
 
+/* _____________________ End of Header styles______________________ */
 
 
+/* _____________________ Start of content styles______________________ */
+
+.content{
+    background-color:#E7E9EB; 
+    height: 100vh;
+}
