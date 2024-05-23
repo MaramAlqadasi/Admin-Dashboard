@@ -2,6 +2,7 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
+  
 }
 .main_container{
     display: grid;
@@ -20,7 +21,7 @@
     flex-direction: column;
     align-items:flex-start; 
     gap:20px;
-    height: 100vh;
+    height: auto;
     font-size: 1.2rem;
     font-weight: bold;
     padding: 20px;
@@ -71,32 +72,30 @@
 /* _____________________ Start of Header styles______________________ */
 .header{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit,minmax(400px,2fr));
     gap: 1rem;
     min-height: 20vh;
     padding: 1rem;
 }
-.search{
-    grid-column: 1/3;
-
-} 
+ 
 .ss{
-    width: 60%;
+    width: 100%;
     padding: 5px 0;
     border: none;
     background-color: #E7E9EB;
     border-radius: 10px;
    
 }
+.search{
+    width: 400px;
+}
 
 .profile{
     display: flex;
     align-items: center;
     width: auto;
-    grid-column:3;
-    justify-self: start;
     gap: 1rem;
+    justify-content: center;
    
 }
 .profile_img_container{
@@ -105,22 +104,25 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    grid-row: 2;
 }
 
 .action_buttons{
-    grid-column: 2/4;
+    justify-content: end;
     justify-self: center;
+    width:275px
+
 }
 
 .header_btn{
   
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.2rem;
     background-color:  rgb(21, 140, 243);
     border-radius: 15px;
     border: none;
     color: white;
     font-weight: bold;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
 
     
@@ -154,6 +156,7 @@
     grid-column: 2;
     margin-top: 5px;
     font-weight: bold;
+   
 }
 
 /* _____________________ End of Header styles______________________ */
@@ -163,5 +166,100 @@
 
 .content{
     background-color:#E7E9EB; 
-    height: 100vh;
+    height:auto;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 10px;
+  
 }
+.projects_main_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-row: 1/3;
+    
+   
+}
+.project_container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    border-left: 5px solid rgb(224, 178, 26);
+    margin: 0.5rem;
+    gap: 0.5rem;
+}
+.project-actions{
+    
+    align-self: flex-end;
+    justify-self: end;
+    color: #5e5c5c;
+    
+}
+.project-actions span{
+    cursor: pointer;
+}
+.heading{
+    
+    font-weight: bold;
+}
+.project_container .description{
+    min-height: 80px;
+}
+.description{
+    color:#5e5c5c
+}
+.annuncement_main_container,.trending_main_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    
+
+}
+.annuncement_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+    gap: .5rem;
+   
+}
+
+
+.trending_container{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0.2rem;
+    justify-content: start;
+    gap: 10px;
+
+}
+.picture{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgb(224, 178, 26);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.picture span{
+    margin-right: 0;
+    font-size: 30px;
+}
+
+.trending_container .heading,.trending_container .description{
+    grid-column: 2;
+}
+
+
